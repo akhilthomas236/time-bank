@@ -1,8 +1,49 @@
-# timebank - Microsoft Teams App
+# TimeBank - Microsoft Teams App
 
-Generate a Microsoft Teams application.
+TimeBank is a Microsoft Teams application that allows team members to log time savings from using productivity tools, earn credits with multipliers, and redeem benefits.
 
-TODO: Add your documentation here
+**GitHub Repository**: https://github.com/akhilthomas236/time-bank
+
+## Features
+
+- 🕐 **Time Tracking**: Log time saved using productivity tools (ChatGPT, Copilot, etc.)
+- 🏆 **Credit System**: Earn credits with multipliers based on the tools used
+- 🎁 **Benefits**: Redeem credits for various benefits (Family Day Off, Professional Courses, etc.)
+- 📊 **Analytics**: Track productivity improvements and visualize data
+- 🔗 **SharePoint Integration**: Store data in SharePoint Lists for enterprise integration
+
+## Quick Start
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/akhilthomas236/time-bank.git
+   cd time-bank
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run debug
+   ```
+
+4. Test bot commands locally:
+   ```bash
+   curl -X POST http://localhost:3007/api/messages \
+     -H "Content-Type: application/json" \
+     -d '{"type":"message","text":"help","from":{"id":"testUser","name":"Test User","aadObjectId":"testUserId"},"recipient":{"id":"bot","name":"TimeBank"},"conversation":{"id":"testConv"},"channelId":"msteams","serviceUrl":"https://smba.trafficmanager.net/amer/"}'
+   ```
+
+## Bot Commands
+
+- `save <minutes> mins - <tool>` - Log time saved (e.g., "save 30 mins - ChatGPT")
+- `balance` - Check your current credit balance
+- `redeem` - View and redeem available benefits
+- `history` - View your time saving history
+- `help` - Show available commands and tools
 
 ## Getting started with Microsoft Teams Apps development
 
